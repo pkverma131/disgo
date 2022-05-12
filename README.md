@@ -44,6 +44,19 @@ sudo mysql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'disgo123';
 mysql -u root -p
 
+pip install pymysql 
+
+**#import in __init__.py in project root ( same as setting.py )**
+
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
 history > command_history.txt
 
 history | cut -c 8- > command_history.txt
+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
